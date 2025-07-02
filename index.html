@@ -1,0 +1,734 @@
+<html lang="en">
+ <head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1" name="viewport" />
+  <title>HS Aitechdigitals</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link
+   href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+   rel="stylesheet"
+  />
+  <link
+   href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&amp;display=swap"
+   rel="stylesheet"
+  />
+  <style>
+   body {
+    font-family: "Inter", sans-serif;
+   }
+   nav a.active {
+    border-bottom-width: 2px;
+    border-color: #9f3737; /* maroon-500 */
+    color: #9f3737;
+   }
+   nav a {
+    padding-bottom: 0.25rem;
+   }
+  </style>
+  <script>
+   tailwind.config = {
+    theme: {
+     extend: {
+      colors: {
+       maroon: {
+        50: "#f9f5f5",
+        100: "#f3e7e7",
+        200: "#e0c4c4",
+        300: "#cc9f9f",
+        400: "#b66b6b",
+        500: "#9f3737",
+        600: "#8e2f2f",
+        700: "#7a2828",
+        800: "#661f1f",
+        900: "#4d1717",
+       },
+      },
+     },
+    },
+   };
+  </script>
+ </head>
+ <body class="bg-maroon-50 text-maroon-900">
+  <nav class="bg-maroon-100 border-b border-maroon-300 fixed w-full z-30">
+   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex justify-between h-16 items-center">
+     <a
+      class="flex items-center space-x-2 ml-4 md:ml-0"
+      href="HS Aitechdigital.png"
+      id="logo-link"
+     >
+      <img
+       alt="HS Aitechdigitals square box logo, blue and white geometric design"
+       class="h-10 w-10"
+       height="40"
+       src="HS Aitechdigital.png"
+       width="40"
+      />
+      <span class="font-semibold text-xl text-maroon-900">HS Aitechdigitals</span>
+     </a>
+     <div class="hidden md:flex md:items-center md:space-x-12">
+      <a
+       class="text-maroon-900 font-semibold hover:text-maroon-600 transition duration-150"
+       href="#home"
+       data-link="home"
+       >Home</a
+      >
+      <a
+       class="text-maroon-900 font-semibold hover:text-maroon-600 transition duration-150"
+       href="#about-us"
+       data-link="about-us"
+       >About Us</a
+      >
+      <div class="relative group">
+       <button
+        aria-expanded="false"
+        aria-haspopup="true"
+        class="inline-flex items-center text-maroon-900 font-semibold hover:text-maroon-600 transition duration-150 focus:outline-none"
+        id="services-menu-button"
+       >
+        Our Services
+        <svg
+         aria-hidden="true"
+         class="ml-1 h-4 w-4 fill-current"
+         fill="none"
+         stroke="currentColor"
+         stroke-linecap="round"
+         stroke-linejoin="round"
+         stroke-width="2"
+         viewBox="0 0 24 24"
+        >
+         <path d="M6 9l6 6 6-6"></path>
+        </svg>
+       </button>
+       <div
+        aria-labelledby="services-menu-button"
+        class="absolute left-1/2 -translate-x-1/2 mt-2 w-48 bg-maroon-100 border border-maroon-300 rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-opacity duration-200 z-20"
+       >
+        <a
+         class="block px-4 py-2 text-maroon-700 hover:bg-maroon-200 hover:text-maroon-600"
+         href="#it-services"
+         data-link="it-services"
+         >IT SERVICES</a
+        >
+        <a
+         class="block px-4 py-2 text-maroon-700 hover:bg-maroon-200 hover:text-maroon-600"
+         href="#digital-marketing"
+         data-link="digital-marketing"
+         >DIGITAL MARKETING</a
+        >
+       </div>
+      </div>
+      <a
+       class="text-maroon-900 font-semibold hover:text-maroon-600 transition duration-150"
+       href="#careers"
+       data-link="careers"
+       >Careers</a
+      >
+      <a
+       class="text-maroon-900 font-semibold hover:text-maroon-600 transition duration-150"
+       href="#contact-us"
+       data-link="contact-us"
+       >Contact Us</a
+      >
+     </div>
+     <div class="flex items-center md:hidden">
+      <button
+       aria-label="Toggle menu"
+       class="text-maroon-700 hover:text-maroon-900 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-maroon-600"
+       id="mobile-menu-button"
+      >
+       <i class="fas fa-bars fa-lg"></i>
+      </button>
+     </div>
+    </div>
+   </div>
+   <div
+    class="md:hidden hidden border-t border-maroon-300 bg-maroon-100"
+    id="mobile-menu"
+   >
+    <a
+     class="block px-4 py-3 text-maroon-900 font-semibold hover:bg-maroon-200"
+     href="#home"
+     data-link="home"
+     >Home</a
+    >
+    <a
+     class="block px-4 py-3 text-maroon-900 font-semibold hover:bg-maroon-200"
+     href="#about-us"
+     data-link="about-us"
+     >About Us</a
+    >
+    <button
+     aria-expanded="false"
+     aria-haspopup="true"
+     class="w-full text-left px-4 py-3 text-maroon-900 font-semibold hover:bg-maroon-200 flex justify-between items-center"
+     id="mobile-services-button"
+    >
+     Our Services
+     <i
+      class="fas fa-chevron-down transition-transform duration-300"
+      id="mobile-services-icon"
+     ></i>
+    </button>
+    <div
+     class="hidden flex-col border-l-4 border-maroon-600 bg-maroon-200"
+     id="mobile-services-menu"
+    >
+     <a
+      class="block px-6 py-2 text-maroon-700 hover:bg-maroon-300"
+      href="#it-services"
+      data-link="it-services"
+      >IT SERVICES</a
+     >
+     <a
+      class="block px-6 py-2 text-maroon-700 hover:bg-maroon-300"
+      href="#digital-marketing"
+      data-link="digital-marketing"
+      >DIGITAL MARKETING</a
+     >
+    </div>
+    <a
+     class="block px-4 py-3 text-maroon-900 font-semibold hover:bg-maroon-200"
+     href="#careers"
+     data-link="careers"
+     >Careers</a
+    >
+    <a
+     class="block px-4 py-3 text-maroon-900 font-semibold hover:bg-maroon-200"
+     href="#contact-us"
+     data-link="contact-us"
+     >Contact Us</a
+    >
+   </div>
+  </nav>
+  <main class="pt-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-24">
+   <section
+    class="relative w-full min-h-[calc(100vh-4rem)] flex items-center justify-center bg-maroon-50"
+    id="home"
+   >
+    <img
+     alt="HS Aitechdigitals business team working in modern office with technology devices, wide and bright"
+     class="absolute inset-0 w-full h-full object-cover"
+     height="600"
+     src="https://storage.googleapis.com/a1aa/image/07c4d2ba-9beb-4b7f-08bb-7f88eed09ac8.jpg"
+     width="1200"
+    />
+    <div
+     class="relative z-10 bg-maroon-900 bg-opacity-40 w-full h-full flex flex-col justify-center items-center text-center px-4 sm:px-6 lg:px-8"
+    >
+     <h1 class="text-4xl sm:text-5xl font-extrabold text-white max-w-4xl mb-6">
+      Welcome to HS Aitechdigitals
+     </h1>
+     <p class="text-lg sm:text-xl text-white max-w-3xl">
+      Delivering cutting-edge IT services and digital marketing solutions to
+      empower your business growth.
+     </p>
+    </div>
+   </section>
+   <section
+    class="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-12"
+    id="about-us"
+   >
+    <div class="md:w-1/2">
+     <img
+      alt="Modern professional team collaborating in a bright office space with laptops and digital devices"
+      class="rounded-lg shadow-lg w-full object-cover max-h-[400px]"
+      height="400"
+      src="https://storage.googleapis.com/a1aa/image/45bf8a07-d399-43b5-b5ab-85edad17a86e.jpg"
+      width="600"
+     />
+    </div>
+    <div class="md:w-1/2 space-y-8">
+     <h2 class="text-3xl font-extrabold text-maroon-900">About Us</h2>
+     <p class="text-maroon-800 text-lg leading-relaxed">
+      HS Aitechdigitals is a pioneering technology company founded by visionary
+      leaders in their youth, dedicated to delivering innovative software
+      solutions and digital marketing expertise. Our team of passionate
+      professionals is committed to driving business success through
+      cutting-edge technology and creative strategies.
+     </p>
+     <div class="space-y-6">
+      <div>
+       <h3 class="text-2xl font-semibold text-maroon-600 mb-2">Our Mission</h3>
+       <p class="text-maroon-800 leading-relaxed">
+        To empower businesses worldwide by providing state-of-the-art IT
+        services and digital marketing solutions that foster growth,
+        innovation, and sustainability.
+       </p>
+      </div>
+      <div>
+       <h3 class="text-2xl font-semibold text-maroon-600 mb-2">Our Vision</h3>
+       <p class="text-maroon-800 leading-relaxed">
+        To be a global leader in technology and marketing services, recognized
+        for transforming ideas into impactful digital experiences that drive
+        measurable success.
+       </p>
+      </div>
+     </div>
+    </div>
+   </section>
+   <section class="max-w-7xl mx-auto space-y-16" id="our-leaders">
+    <h2 class="text-4xl font-extrabold text-maroon-900 text-center mb-12">
+     Our Leaders
+    </h2>
+    <div
+     class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8"
+    >
+     <div
+      class="bg-maroon-100 rounded-lg shadow p-6 flex flex-col items-center text-center transition-transform transform hover:scale-105 hover:shadow-2xl duration-300"
+     >
+      <img
+       alt="Portrait of Managing Director John Smith, a middle-aged man in formal business suit with confident smile"
+       class="rounded-full w-32 h-32 object-cover mb-4"
+       height="128"
+       src="https://storage.googleapis.com/a1aa/image/0e0f006d-b96d-4b21-d50f-7f35110b8ea7.jpg"
+       width="128"
+      />
+      <h3 class="font-semibold text-xl mb-1 text-maroon-900">John Smith</h3>
+      <p class="text-maroon-600 font-semibold mb-2">Managing Director</p>
+      <p class="text-maroon-800 text-sm">
+       John leads the company with over 20 years of experience in technology
+       and business management, driving strategic growth and innovation.
+      </p>
+     </div>
+     <div
+      class="bg-maroon-100 rounded-lg shadow p-6 flex flex-col items-center text-center transition-transform transform hover:scale-105 hover:shadow-2xl duration-300"
+     >
+      <img
+       alt="Portrait of CEO Lisa Brown, a confident woman in her 40s wearing business attire"
+       class="rounded-full w-32 h-32 object-cover mb-4"
+       height="128"
+       src="https://storage.googleapis.com/a1aa/image/a03f0f70-161f-44bf-5e00-74f063ff4b8a.jpg"
+       width="128"
+      />
+      <h3 class="font-semibold text-xl mb-1 text-maroon-900">Lisa Brown</h3>
+      <p class="text-maroon-600 font-semibold mb-2">Chief Executive Officer</p>
+      <p class="text-maroon-800 text-sm">
+       Lisa oversees all company operations and leads the vision for innovative
+       IT and marketing solutions.
+      </p>
+     </div>
+     <div
+      class="bg-maroon-100 rounded-lg shadow p-6 flex flex-col items-center text-center transition-transform transform hover:scale-105 hover:shadow-2xl duration-300"
+     >
+      <img
+       alt="Portrait of CTO Michael Green, a man in his 30s with glasses and casual business shirt"
+       class="rounded-full w-32 h-32 object-cover mb-4"
+       height="128"
+       src="https://storage.googleapis.com/a1aa/image/60357000-fc4a-4d94-be39-9730b76857ac.jpg"
+       width="128"
+      />
+      <h3 class="font-semibold text-xl mb-1 text-maroon-900">Michael Green</h3>
+      <p class="text-maroon-600 font-semibold mb-2">Chief Technology Officer</p>
+      <p class="text-maroon-800 text-sm">
+       Michael leads the technology team, ensuring the delivery of cutting-edge
+       software and IT services.
+      </p>
+     </div>
+     <div
+      class="bg-maroon-100 rounded-lg shadow p-6 flex flex-col items-center text-center transition-transform transform hover:scale-105 hover:shadow-2xl duration-300"
+     >
+      <img
+       alt="Portrait of CMO Sarah White, a professional woman in her 30s with a friendly smile"
+       class="rounded-full w-32 h-32 object-cover mb-4"
+       height="128"
+       src="https://storage.googleapis.com/a1aa/image/b817da8d-0d52-4c9e-f2de-48d823d4e148.jpg"
+       width="128"
+      />
+      <h3 class="font-semibold text-xl mb-1 text-maroon-900">Sarah White</h3>
+      <p class="text-maroon-600 font-semibold mb-2">Chief Marketing Officer</p>
+      <p class="text-maroon-800 text-sm">
+       Sarah drives the digital marketing strategies and brand growth for HS
+       Aitechdigitals.
+      </p>
+     </div>
+    </div>
+   </section>
+   <section class="max-w-7xl mx-auto space-y-16" id="our-services">
+    <h2 class="text-4xl font-extrabold text-maroon-900 text-center mb-12">
+     Our Services
+    </h2>
+    <div class="space-y-8" id="it-services">
+     <h3 class="text-3xl font-semibold text-maroon-600 mb-6 text-center">
+      IT SERVICES
+     </h3>
+     <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
+      <div class="bg-maroon-100 rounded-lg shadow p-6 flex flex-col items-center text-center transition-transform transform hover:scale-105 hover:shadow-2xl duration-300">
+       <img alt="Icon representing full stack web development with code and browser window" class="h-16 w-16 mb-4" height="64" src="https://storage.googleapis.com/a1aa/image/170a7a0a-a3af-4c58-a565-214049b16e8b.jpg" width="64"/>
+       <h4 class="font-semibold text-lg text-maroon-900">
+        Full Stack Web Development
+       </h4>
+      </div>
+      <div class="bg-maroon-100 rounded-lg shadow p-6 flex flex-col items-center text-center transition-transform transform hover:scale-105 hover:shadow-2xl duration-300">
+       <img alt="Icon representing eCommerce platform with shopping cart and web page" class="h-16 w-16 mb-4" height="64" src="https://storage.googleapis.com/a1aa/image/533de768-a65b-496e-79f8-4341f754c858.jpg" width="64"/>
+       <h4 class="font-semibold text-lg text-maroon-900">
+        E-commerce Solutions
+       </h4>
+      </div>
+      <div class="bg-maroon-100 rounded-lg shadow p-6 flex flex-col items-center text-center transition-transform transform hover:scale-105 hover:shadow-2xl duration-300">
+       <img alt="Icon representing admin dashboard with charts and controls" class="h-16 w-16 mb-4" height="64" src="https://storage.googleapis.com/a1aa/image/fef47836-9b7e-4e8b-f4e2-8f92a024167f.jpg" width="64"/>
+       <h4 class="font-semibold text-lg text-maroon-900">
+        Admin Dashboard Development
+       </h4>
+      </div>
+      <div class="bg-maroon-100 rounded-lg shadow p-6 flex flex-col items-center text-center transition-transform transform hover:scale-105 hover:shadow-2xl duration-300">
+       <img alt="Icon representing hospital management system with medical cross and computer" class="h-16 w-16 mb-4" height="64" src="https://storage.googleapis.com/a1aa/image/7d5cd545-c127-4fff-ee2d-355b9d54829b.jpg" width="64"/>
+       <h4 class="font-semibold text-lg text-maroon-900">
+        Hospital Management Systems
+       </h4>
+      </div>
+      <div class="bg-maroon-100 rounded-lg shadow p-6 flex flex-col items-center text-center transition-transform transform hover:scale-105 hover:shadow-2xl duration-300">
+       <img alt="Icon representing email services with envelope and digital symbols" class="h-16 w-16 mb-4" height="64" src="https://storage.googleapis.com/a1aa/image/6bc9b836-eca3-4dbc-6ebf-39cc40937655.jpg" width="64"/>
+       <h4 class="font-semibold text-lg text-maroon-900">
+        Email &amp; Communication Solutions
+       </h4>
+      </div>
+      <div class="bg-maroon-100 rounded-lg shadow p-6 flex flex-col items-center text-center transition-transform transform hover:scale-105 hover:shadow-2xl duration-300">
+       <img alt="Icon representing cloud computing with cloud and network nodes" class="h-16 w-16 mb-4" height="64" src="https://storage.googleapis.com/a1aa/image/e0ae4b3a-0bce-4b84-5885-e1b56ad88923.jpg" width="64"/>
+       <h4 class="font-semibold text-lg text-maroon-900">
+        Cloud Computing Services
+       </h4>
+      </div>
+      <div class="bg-maroon-100 rounded-lg shadow p-6 flex flex-col items-center text-center transition-transform transform hover:scale-105 hover:shadow-2xl duration-300">
+       <img alt="Icon representing cybersecurity shield with lock and network" class="h-16 w-16 mb-4" height="64" src="https://storage.googleapis.com/a1aa/image/df1e3942-c034-4a27-2b65-08edee91f1d3.jpg" width="64"/>
+       <h4 class="font-semibold text-lg text-maroon-900">
+        Cybersecurity Solutions
+       </h4>
+      </div>
+      <div class="bg-maroon-100 rounded-lg shadow p-6 flex flex-col items-center text-center transition-transform transform hover:scale-105 hover:shadow-2xl duration-300">
+       <img alt="Icon representing mobile app development with smartphone and code" class="h-16 w-16 mb-4" height="64" src="https://storage.googleapis.com/a1aa/image/12ec8e79-10ff-4e55-0fae-b37e568ec3a3.jpg" width="64"/>
+       <h4 class="font-semibold text-lg text-maroon-900">
+        Mobile App Development
+       </h4>
+      </div>
+      <div class="bg-maroon-100 rounded-lg shadow p-6 flex flex-col items-center text-center transition-transform transform hover:scale-105 hover:shadow-2xl duration-300">
+       <img alt="Icon representing database management with stacked disks" class="h-16 w-16 mb-4" height="64" src="https://storage.googleapis.com/a1aa/image/2182e2e4-7a42-4864-cd19-3c9af46278a5.jpg" width="64"/>
+       <h4 class="font-semibold text-lg text-maroon-900">
+        Database Management
+       </h4>
+      </div>
+      <div class="bg-maroon-100 rounded-lg shadow p-6 flex flex-col items-center text-center transition-transform transform hover:scale-105 hover:shadow-2xl duration-300">
+       <img alt="Icon representing IT consulting with headset and gear" class="h-16 w-16 mb-4" height="64" src="https://storage.googleapis.com/a1aa/image/a136529c-5d9d-4054-4525-6f09ee8a7f3f.jpg" width="64"/>
+       <h4 class="font-semibold text-lg text-maroon-900">
+        IT Consulting Services
+       </h4>
+      </div>
+     </div>
+    </div>
+    <div class="space-y-8 mt-20" id="digital-marketing">
+     <h3 class="text-3xl font-semibold text-maroon-600 mb-6 text-center">
+      DIGITAL MARKETING
+     </h3>
+     <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
+      <div class="bg-maroon-100 rounded-lg shadow p-6 flex flex-col items-center text-center transition-transform transform hover:scale-105 hover:shadow-2xl duration-300">
+       <img alt="Icon representing SEO with magnifying glass and upward graph" class="h-16 w-16 mb-4" height="64" src="https://storage.googleapis.com/a1aa/image/f24e59aa-f19c-448a-f561-84504042a9e4.jpg" width="64"/>
+       <h4 class="font-semibold text-lg text-maroon-900">
+        SEO Optimization
+       </h4>
+      </div>
+      <div class="bg-maroon-100 rounded-lg shadow p-6 flex flex-col items-center text-center transition-transform transform hover:scale-105 hover:shadow-2xl duration-300">
+       <img alt="Icon representing graphic design with pencil and color palette" class="h-16 w-16 mb-4" height="64" src="https://storage.googleapis.com/a1aa/image/7b6cd1a8-b8b0-4b04-20da-e9497f271324.jpg" width="64"/>
+       <h4 class="font-semibold text-lg text-maroon-900">
+        Graphic Design
+       </h4>
+      </div>
+      <div class="bg-maroon-100 rounded-lg shadow p-6 flex flex-col items-center text-center transition-transform transform hover:scale-105 hover:shadow-2xl duration-300">
+       <img alt="Icon representing video editing with film strip and scissors" class="h-16 w-16 mb-4" height="64" src="https://storage.googleapis.com/a1aa/image/a6c7cc07-bd08-4d5d-a591-6ae74dfb69d5.jpg" width="64"/>
+       <h4 class="font-semibold text-lg text-maroon-900">
+        Video Editing
+       </h4>
+      </div>
+      <div class="bg-maroon-100 rounded-lg shadow p-6 flex flex-col items-center text-center transition-transform transform hover:scale-105 hover:shadow-2xl duration-300">
+       <img alt="Icon representing UI/UX design with wireframe and cursor" class="h-16 w-16 mb-4" height="64" src="https://storage.googleapis.com/a1aa/image/4a66b63a-7d23-4372-db83-10ef2763705a.jpg" width="64"/>
+       <h4 class="font-semibold text-lg text-maroon-900">
+        UI/UX Design
+       </h4>
+      </div>
+      <div class="bg-maroon-100 rounded-lg shadow p-6 flex flex-col items-center text-center transition-transform transform hover:scale-105 hover:shadow-2xl duration-300">
+       <img alt="Icon representing business analytics with charts and magnifying glass" class="h-16 w-16 mb-4" height="64" src="https://storage.googleapis.com/a1aa/image/251f4d8e-e879-44cb-8724-c50f9ca06a71.jpg" width="64"/>
+       <h4 class="font-semibold text-lg text-maroon-900">
+        Business Analytics
+       </h4>
+      </div>
+      <div class="bg-maroon-100 rounded-lg shadow p-6 flex flex-col items-center text-center transition-transform transform hover:scale-105 hover:shadow-2xl duration-300">
+       <img alt="Icon representing social media marketing with chat bubbles and network" class="h-16 w-16 mb-4" height="64" src="https://storage.googleapis.com/a1aa/image/69d1f15f-91d6-48b5-9391-4c79052a279f.jpg" width="64"/>
+       <h4 class="font-semibold text-lg text-maroon-900">
+        Social Media Marketing
+       </h4>
+      </div>
+      <div class="bg-maroon-100 rounded-lg shadow p-6 flex flex-col items-center text-center transition-transform transform hover:scale-105 hover:shadow-2xl duration-300">
+       <img alt="Icon representing content marketing with document and pen" class="h-16 w-16 mb-4" height="64" src="https://storage.googleapis.com/a1aa/image/77a3d3d2-f4ff-4b7f-4d92-6e63f742d07f.jpg" width="64"/>
+       <h4 class="font-semibold text-lg text-maroon-900">
+        Content Marketing
+       </h4>
+      </div>
+      <div class="bg-maroon-100 rounded-lg shadow p-6 flex flex-col items-center text-center transition-transform transform hover:scale-105 hover:shadow-2xl duration-300">
+       <img alt="Icon representing email marketing with envelope and digital symbols" class="h-16 w-16 mb-4" height="64" src="https://storage.googleapis.com/a1aa/image/29506768-9fba-41a4-6ba9-eeede1a1aba8.jpg" width="64"/>
+       <h4 class="font-semibold text-lg text-maroon-900">
+        Email Marketing
+       </h4>
+      </div>
+      <div class="bg-maroon-100 rounded-lg shadow p-6 flex flex-col items-center text-center transition-transform transform hover:scale-105 hover:shadow-2xl duration-300">
+       <img alt="Icon representing pay-per-click advertising with mouse pointer and dollar sign" class="h-16 w-16 mb-4" height="64" src="https://storage.googleapis.com/a1aa/image/ab74f367-2493-45d1-ead4-6428f742de13.jpg" width="64"/>
+       <h4 class="font-semibold text-lg text-maroon-900">
+        Pay-Per-Click Advertising
+       </h4>
+      </div>
+      <div class="bg-maroon-100 rounded-lg shadow p-6 flex flex-col items-center text-center transition-transform transform hover:scale-105 hover:shadow-2xl duration-300">
+       <img alt="Icon representing influencer marketing with megaphone and people" class="h-16 w-16 mb-4" height="64" src="https://storage.googleapis.com/a1aa/image/a25a5c95-a81e-4ab7-e5c1-ddba7caf2130.jpg" width="64"/>
+       <h4 class="font-semibold text-lg text-maroon-900">
+        Influencer Marketing
+       </h4>
+      </div>
+     </div>
+    </div>
+   </section>
+   <section class="max-w-7xl mx-auto space-y-12 px-4 sm:px-6 lg:px-8" id="contact-us">
+    <h2 class="text-4xl font-extrabold text-maroon-900 text-center mb-8">
+     Contact Us
+    </h2>
+    <div class="max-w-3xl mx-auto bg-maroon-100 rounded-lg shadow p-8">
+     <form action="#" class="space-y-6" method="POST" novalidate>
+      <div>
+       <label class="block text-maroon-900 font-semibold mb-2" for="name">
+        Name
+       </label>
+       <input
+        class="w-full rounded-md border border-maroon-300 px-4 py-2 text-maroon-900 placeholder-maroon-500 focus:border-maroon-600 focus:ring-1 focus:ring-maroon-600"
+        id="name"
+        name="name"
+        placeholder="Your full name"
+        required
+        type="text"
+       />
+      </div>
+      <div>
+       <label class="block text-maroon-900 font-semibold mb-2" for="email">
+        Email
+       </label>
+       <input
+        class="w-full rounded-md border border-maroon-300 px-4 py-2 text-maroon-900 placeholder-maroon-500 focus:border-maroon-600 focus:ring-1 focus:ring-maroon-600"
+        id="email"
+        name="email"
+        placeholder="you@example.com"
+        required
+        type="email"
+       />
+      </div>
+      <div>
+       <label class="block text-maroon-900 font-semibold mb-2" for="phone">
+        Phone Number
+       </label>
+       <input
+        class="w-full rounded-md border border-maroon-300 px-4 py-2 text-maroon-900 placeholder-maroon-500 focus:border-maroon-600 focus:ring-1 focus:ring-maroon-600"
+        id="phone"
+        name="phone"
+        placeholder="+1 (555) 123-4567"
+        type="tel"
+       />
+      </div>
+      <div>
+       <label class="block text-maroon-900 font-semibold mb-2" for="message">
+        Message
+       </label>
+       <textarea
+        class="w-full rounded-md border border-maroon-300 px-4 py-2 text-maroon-900 placeholder-maroon-500 focus:border-maroon-600 focus:ring-1 focus:ring-maroon-600"
+        id="message"
+        name="message"
+        placeholder="Write your message here..."
+        required
+        rows="5"
+       ></textarea>
+      </div>
+      <div class="text-center">
+       <button
+        class="bg-maroon-600 hover:bg-maroon-700 text-white font-semibold px-6 py-3 rounded-md transition"
+        type="submit"
+       >
+        Send Message
+       </button>
+      </div>
+     </form>
+    </div>
+   </section>
+   <section class="max-w-7xl mx-auto space-y-12 px-4 sm:px-6 lg:px-8" id="careers">
+    <h2 class="text-4xl font-extrabold text-maroon-900 text-center">
+     Careers
+    </h2>
+    <p class="max-w-3xl mx-auto text-center text-maroon-800 text-lg leading-relaxed">
+     Join the dynamic and innovative team at HS Aitechdigitals. We are always
+     looking for passionate professionals in software development, digital
+     marketing, project management, and more. Grow your career with us and be
+     part of shaping the future of technology and marketing.
+    </p>
+    <div class="max-w-3xl mx-auto text-center">
+     <a
+      class="inline-block bg-maroon-600 text-white px-6 py-3 rounded-md font-semibold hover:bg-maroon-700 transition"
+      href="mailto:HS Aitechdigitals@gmail.com"
+      >Apply Now</a
+     >
+    </div>
+   </section>
+  </main>
+  <footer class="bg-maroon-900 text-maroon-300 py-12 mt-20">
+   <div
+    class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-4 gap-8"
+   >
+    <div class="flex flex-col items-start space-y-4">
+     <img
+      alt="HS Aitechdigitals square box logo, blue and white geometric design"
+      class="h-12 w-12"
+      height="48"
+      src="HS Aitechdigital.png"
+      width="48"
+     />
+     <span class="font-semibold text-lg text-white">HS Aitechdigitals</span>
+     <p class="text-maroon-300 max-w-xs">
+      Delivering innovative IT and digital marketing solutions to empower your
+      business growth.
+     </p>
+    </div>
+    <div>
+     <h3 class="text-white font-semibold mb-4 text-lg">Useful Links</h3>
+     <ul class="space-y-2">
+      <li><a class="text-white transition" href="#home">Home</a></li>
+      <li><a class="text-white transition" href="#about-us">About Us</a></li>
+      <li><a class="text-white transition" href="#our-services">Our Services</a></li>
+      <li><a class="text-white transition" href="#careers">Careers</a></li>
+      <li><a class="text-white transition" href="#contact-us">Contact Us</a></li>
+     </ul>
+    </div>
+    <div>
+     <h3 class="text-white font-semibold mb-4 text-lg">Contact Info</h3>
+     <ul class="space-y-3 text-maroon-300">
+      <li class="flex items-center space-x-3">
+       <i class="fas fa-envelope text-maroon-600"></i>
+       <a class="hover:text-white transition" href="mailto:HS Aitechdigitals@gmail.com"
+        >HS Aitechdigitals@gmail.com</a
+       >
+      </li>
+      <li class="flex items-center space-x-3">
+       <i class="fas fa-phone-alt text-maroon-600"></i>
+       <a class="hover:text-white transition" href="tel:+918801559157">8801559157</a>
+      </li>
+      <li class="flex items-center space-x-3">
+       <i class="fas fa-phone-alt text-maroon-600"></i>
+       <a class="hover:text-white transition" href="tel:+918179992473">8179992473</a>
+      </li>
+     </ul>
+    </div>
+    <div>
+     <h3 class="text-white font-semibold mb-4 text-lg">Follow Us</h3>
+     <div class="flex space-x-6">
+      <a
+       aria-label="Facebook"
+       class="text-maroon-300 hover:text-white transition"
+       href="https://facebook.com/HS Aitechdigitals"
+       rel="noopener noreferrer"
+       target="_blank"
+      >
+       <i class="fab fa-facebook fa-lg"></i>
+      </a>
+      <a
+       aria-label="Twitter"
+       class="text-maroon-300 hover:text-white transition"
+       href="https://twitter.com/HS Aitechdigitals"
+       rel="noopener noreferrer"
+       target="_blank"
+      >
+       <i class="fab fa-twitter fa-lg"></i>
+      </a>
+      <a
+       aria-label="LinkedIn"
+       class="text-maroon-300 hover:text-white transition"
+       href="https://linkedin.com/company/HS Aitechdigitals"
+       rel="noopener noreferrer"
+       target="_blank"
+      >
+       <i class="fab fa-linkedin fa-lg"></i>
+      </a>
+      <a
+       aria-label="Instagram"
+       class="text-maroon-300 hover:text-white transition"
+       href="https://instagram.com/HS Aitechdigitals"
+       rel="noopener noreferrer"
+       target="_blank"
+      >
+       <i class="fab fa-instagram fa-lg"></i>
+      </a>
+     </div>
+    </div>
+   </div>
+   <div class="mt-8 border-t border-maroon-700 pt-6 text-center text-maroon-400 text-sm">
+    © 2024 HS Aitechdigitals. All rights reserved.
+   </div>
+  </footer>
+  <script>
+   const menuButton = document.getElementById("mobile-menu-button");
+   const mobileMenu = document.getElementById("mobile-menu");
+   const mobileServicesButton = document.getElementById("mobile-services-button");
+   const mobileServicesMenu = document.getElementById("mobile-services-menu");
+   const mobileServicesIcon = document.getElementById("mobile-services-icon");
+   const navLinks = document.querySelectorAll('nav a[data-link]');
+   const mobileLinks = document.querySelectorAll('#mobile-menu a[data-link]');
+
+   // Toggle mobile menu
+   menuButton.addEventListener("click", () => {
+    mobileMenu.classList.toggle("hidden");
+   });
+
+   // Toggle mobile services submenu
+   mobileServicesButton.addEventListener("click", () => {
+    mobileServicesMenu.classList.toggle("hidden");
+    mobileServicesIcon.classList.toggle("rotate-180");
+   });
+
+   // Close mobile menu on link click and set active link
+   function setActiveLink(linkName) {
+    navLinks.forEach((link) => {
+     if (link.dataset.link === linkName) {
+      link.classList.add("active");
+     } else {
+      link.classList.remove("active");
+     }
+    });
+    mobileLinks.forEach((link) => {
+     if (link.dataset.link === linkName) {
+      link.classList.add("active");
+     } else {
+      link.classList.remove("active");
+     }
+    });
+   }
+
+   function handleLinkClick(e) {
+    e.preventDefault();
+    const targetId = this.getAttribute("href").substring(1);
+    const targetSection = document.getElementById(targetId);
+    if (targetSection) {
+     targetSection.scrollIntoView({ behavior: "smooth" });
+    }
+    setActiveLink(this.dataset.link);
+    if (!mobileMenu.classList.contains("hidden")) {
+     mobileMenu.classList.add("hidden");
+     if (!mobileServicesMenu.classList.contains("hidden")) {
+      mobileServicesMenu.classList.add("hidden");
+      mobileServicesIcon.classList.remove("rotate-180");
+     }
+    }
+   }
+
+   navLinks.forEach((link) => {
+    link.addEventListener("click", handleLinkClick);
+   });
+   mobileLinks.forEach((link) => {
+    link.addEventListener("click", handleLinkClick);
+   });
+
+   // Set initial active link on page load
+   window.addEventListener("load", () => {
+    setActiveLink("home");
+   });
+  </script>
+ </body>
+</html>
